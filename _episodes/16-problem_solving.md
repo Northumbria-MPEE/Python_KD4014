@@ -12,16 +12,14 @@ objectives:
 - "Approach a problem in a strategic manner"
 
 keypoints:
-- "Follow standard Python style in your code."
-- "Use assertions to check for internal errors"
-- "Use docstrings to provide online help."
-- "Use `__version__` to increase code reproducibility."
+- "An algorithm is a plan for solving a problem."
+- "Follow the eight outlined steps when approaching a new problem."
 ---
 
 In this section of the course we learn how to develop a solution to an unseen problem.
 The guidance here is not unique to physics, or even using a computer to solve a problem. This process can be used to solve a wide variety of problems, including those which are unrelated to computers.
 
-## Algorithm development
+## An algorithm is a plan for solving a problem.
 
 An algorithm is a plan for solving a problem. An algorithm can take many forms: a written description (e.g. recipe), mathematical (e.g. steps for solving a quadratic equation) or graphical (e.g. an Ikea instruction booklet). 
 
