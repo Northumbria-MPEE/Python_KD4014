@@ -151,6 +151,7 @@ In this step we translate the algorithm into a programming language of our choic
 Next we want to establish that our results are reasonable. 
 
 - Are there related problems which we know the solution to? How does our solution compare?
+- Looking back at the raw or input data, do our results look sensible?
 
 For quantitative solutions we can also ask the following questions:
 
