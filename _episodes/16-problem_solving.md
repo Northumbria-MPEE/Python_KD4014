@@ -166,7 +166,7 @@ Once we are satisfied that the algorithm does provide a solution to the problem,
 
 > ## Simple example
 >
-> A code that computes the area of a circle having radius 5.2 meters (formula $π*5.22$) solves a very specific problem, but an algorithm that computes the area of any circle (formula $π*R^2$) solves a more general problem.
+> A code that computes the area of a circle having radius 5.2 meters (formula $π * 5.22$) solves a very specific problem, but an algorithm that computes the area of any circle (formula $π * R^2$) solves a more general problem.
 {: .callout}
 
 - Can this algorithm be simplified?
