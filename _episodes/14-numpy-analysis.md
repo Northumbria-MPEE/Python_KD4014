@@ -288,10 +288,14 @@ print(numpy.mean(data[:,1:], axis=0))
 ~~~
 {: .output}
 
-> ## Error bars and exponential growth
+> ## Calculating the band gap of photovoltaic materials
 > 
-> This question is partly modelled on the a [blog post](https://towardsdatascience.com/modeling-exponential-growth-49a2b6f22e1f). There is also a nice
-> [3Blue1Brown video on exponential growth in the context of Covid](https://www.youtube.com/watch?v=Kas0tIxDvrg).
+> In the tutorial we calculate the band gap of ITO. 
+> Following the same procedure, calculate the band gap of one of the following photovoltaic materials: CdS, Si or GaAs. 
+> To verify your code compare your band gap value to those found in the literature
+{: .challenge}
+
+> ## Applying error bars
 > 
 > We have the following (hypothetical) data for the number of Covid cases at a university over a two-week period: 
 > `3, 4, 8, 15, 32, 65, 128, 253, 512, 1025, 2049, 4090, 8191, 16387`. Each data point corresponds to the positive test results received on a single day.
@@ -304,7 +308,8 @@ print(numpy.mean(data[:,1:], axis=0))
 > > import matplotlib.pyplot as plt
 > > 
 > > case_numbers = np.array([3,4,8,15,32,65,128,253,512,1025,2049,4090,8191,16387])
-> > plt.scatter(np.arange(0,15),case_numbers)
+> > day_numbers = np.arange(0,14)
+> > plt.scatter(day_numbers,case_numbers)
 > > plt.xlabel("Day number")
 > > plt.ylabel("Covid case count")
 > > 
@@ -314,7 +319,7 @@ print(numpy.mean(data[:,1:], axis=0))
 > > {: .language-python}
 > {: .solution}
 > 
-> An administrator realises that some test results may have been filed a day late or a day early. This makes the error bar on the case numbers +/- 200.
+> An administrator realises that some test results may have been filed a day late or a day early. This makes the error bars on day $i$ +- case_numbers[-1]..
 > Using the `matplotlib.pyplot.errorbar` function with the `yerr` keyword argument plot the case number data with error bars. 
 > Label your axes and title  the plot.
 > 
@@ -322,39 +327,13 @@ print(numpy.mean(data[:,1:], axis=0))
 > > ~~~
 > > import matplotlib.pyplot as plt
 > > 
-> > plt.errorbar(day,case_numbers,yerr=200)
+> > plt.errorbar(day_numbers,case_numbers,yerr=[0]+list(case_numbers[:-1]))
 > > plt.xlabel("Time (days)")
 > > plt.ylabel("Case numbers")
 > > plt.title("Covid case numbers over time")
 > > ~~~
 > > {: .language-python}
 > {: .solution}
-> 
-> By taking a logarithm of the data, fit a straight line to the case number data and predict the exponential growth factor. 
-> 
-> > ## Solution
-> > From scanning the blog post we can see that the growth factor is the base of the exponential.
-> > Assuming the growth is exponential, to generate a straight-(ish) line we first need to take a logarithm of the case values data.
-> > We can then fit a straight line to this to calculate the logarithm of the growth factor. 
-> > ~~~
-> > log_growth_factor, log_starting_case_number = np.polyfit(day,np.log(case_numbers),1)
-> > growth_factor = np.exp(log_growth_factor)
-> > ~~~
-> > {: .language-python}
-> {: .solution}
-> 
-> From inspecting the data, does the calculated growth factor make sense? 
-> 
-> > ## Solution
-> > The data roughly doubles each day. The calculated growth factor is 1.94, which is reassuringly close to 2. 
-> {: .solution}
-{: .challenge}
-
-> ## Calculating the band gap of photovoltaic materials
-> 
-> In the tutorial we calculate the band gap of ITO. 
-> Following the same procedure, calculate the band gap of one of the following photovoltaic materials: CdS, Si or GaAs. 
-> To verify your code compare your band gap value to those found in the literature
 {: .challenge}
 
 > ## Encapsulation
