@@ -172,7 +172,7 @@ Once we are satisfied that the algorithm does provide a solution to the problem,
 - Can this algorithm be simplified?
 
 
-> ### Simple example
+> ## Simple example
 >
 > For example, one formula for computing the perimeter of a rectangle is: length + width + length + width
 >
@@ -182,7 +182,7 @@ Once we are satisfied that the algorithm does provide a solution to the problem,
 - Is this solution similar to the solution to another problem? How are they alike? How are they different?
 
 
-> ### Simple example
+> ## Simple example
 >
 > Consider the following two formulae:
 > 
@@ -196,14 +196,6 @@ Once we are satisfied that the algorithm does provide a solution to the problem,
 >
 > Hypothesis: Perhaps every area formula involves multiplying two measurements.
 {: .callout}
-
-> ## Problem Solving applied to exponential decay
->
-> This question is partly modelled on the a [blog post](https://towardsdatascience.com/modeling-exponential-growth-49a2b6f22e1f).
->
-> We have the following (hypothetical) data for the number of Covid cases at a university over a two-week period: 
-> `3, 4, 8, 15, 32, 65, 128, 253, 512, 1025, 2049, 4090, 8191, 16387`. Each data point corresponds to the positive test results received on a single day.
-{: .challenge}
 
 > ## Problem solving applied to exponential decay
 >
